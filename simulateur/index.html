@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Simulateur</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <div class="container text-center">
+        <h1>Simulateur de tarif</h1>
+    </div>
+</header>
+<section>
+    <div class="container">
+        <div class="form-group form-spacing">
+            <label for="revenu">Revenus du foyer mensuels sur l'année N - 2 avant abattement <span class="important">(en &euro;)</span></label>
+            <input type="text" class="form-control form-control-lg" id="revenu" maxlength="10" placeholder="0.00">
+            <span>
+                Revenu pris en compte entre <span class="important">687.30&euro;</span> et <span class="important">4874.62&euro;.</span>
+            </span>
+        </div>
+
+        <div class="form-spacing">
+            <div>
+                <label for="enfant">Nombre d'enfants à charge :</label>
+            </div>
+            <div id="enfant">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option1" value="1" checked>
+                    <label class="form-check-label" for="option1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option2" value="2">
+                    <label class="form-check-label" for="option2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option3" value="3">
+                    <label class="form-check-label" for="option3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option4" value="4">
+                    <label class="form-check-label" for="option4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option5" value="5">
+                    <label class="form-check-label" for="option5">5</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option6" value="6">
+                    <label class="form-check-label" for="option6">6</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option7" value="7">
+                    <label class="form-check-label" for="option7">7</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="option" id="option8" value="8">
+                    <label class="form-check-label" for="option8">8+</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group form-spacing">
+            <label for="collectif">Votre tarif horaire en accueil collectif <span class="important">(en &euro; et par enfant)</span></label>
+            <input id="collectif" class="form-control form-control-lg" type="text" placeholder="0.00" readonly>
+        </div>
+        <div class="form-group form-spacing">
+            <label for="familial">Votre tarif horaire en accueil familial <span class="important">(en &euro; et par enfant)</span></label>
+            <input id="familial" class="form-control form-control-lg" type="text" placeholder="0.00" readonly>
+        </div>
+        <div class="form-spacing">
+            <p>
+                L'accueil collectif se déroule dans les crèches - haltes - garderies municipales.<br>
+                L'accueil familial se déroule au domicile des assistant(e)s maternel(le)s du CCAS.
+            </p>
+            <p>
+                <span class="important">Attention, cette simulation est calculée juste à titre indicatif et est non contractuelle.</span>
+            </p>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/script.js"></script>
