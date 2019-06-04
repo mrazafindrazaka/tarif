@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    /* Fonction de filtrage pour autoriser uniquement les nombres. */
     (function ($) {
         $.fn.inputFilter = function (inputFilter) {
             return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
@@ -17,6 +18,7 @@ $(document).ready(function () {
         return /^-?\d*[.,]?\d{0,2}$/.test(value);
     });
 
+    /* Fonction de calcul. */
     let calcul = function () {
         let revenu = parseFloat($("#revenu").val());
         let radio = parseInt($("input[name='option']:checked").val());
@@ -25,12 +27,21 @@ $(document).ready(function () {
         let result_collectif;
         let result_familial;
 
+        /*
+        ** Revenus minimums et maximums prisent en compte. (à changer aussi dans index.html)
+        ** min = minimum
+        ** max = maximum
+        */
+
+        let min = 8247.60;
+        let max = 58495.44;
+
         if (!revenu)
-            revenu = 687.30;
-        if (revenu < 687.30)
-            revenu = 687.30;
-        else if (revenu > 4874.62)
-            revenu = 4874.62;
+            revenu = min;
+        if (revenu < min)
+            revenu = min;
+        else if (revenu > max)
+            revenu = max;
 
         /*
         ** Taux pour le tarif collectif et familial par nombre d'enfants.
@@ -74,12 +85,13 @@ $(document).ready(function () {
             default:
                 break;
         }
-
-        result_collectif = revenu * tarif_collectif / 100;
-        result_familial = revenu * tarif_familial / 100;
+        result_collectif = (revenu * tarif_collectif / 100) / 12;
+        result_familial = (revenu * tarif_familial / 100) / 12;
         $("#collectif").val(result_collectif.toFixed(2));
         $("#familial").val(result_familial.toFixed(2));
     };
+
+    /* Application des calculs en direct */
     calcul();
     $("#revenu").on("input", calcul);
     $("input[name='option']:radio").change(calcul);

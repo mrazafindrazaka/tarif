@@ -2,23 +2,30 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Simulateur</title>
     <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
     <link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <header>
-    <div class="container text-center">
-        <h1>Simulateur de tarif</h1>
+    <div class="container">
+        <img src="image/logo.png" alt="Nancy (retour à l'accueil)">
     </div>
 </header>
 <section>
     <div class="container">
+        <h1 class="page-title">Simulateur de tarif petite enfance</h1>
+    </div>
+    <div class="container">
         <div class="form-group form-spacing">
-            <label for="revenu">Revenus du foyer mensuels sur l'année N - 2 avant abattement <span class="important">(en &euro;)</span></label>
+            <label for="revenu">Revenus année - 2 du foyer (avant abattements) <span
+                    class="important">(en &euro;)</span></label>
             <input type="text" class="form-control form-control-lg" id="revenu" maxlength="10" placeholder="0.00">
-            <span>
-                Revenu pris en compte entre <span class="important">687.30&euro;</span> et <span class="important">4874.62&euro;.</span>
+            <span class="font-italic">
+                <!-- Valeurs à changer ici -->
+                * Revenu pris en compte entre
+                <span class="important">8247.60&euro;</span> et <span class="important">58495.44&euro;.</span>
             </span>
         </div>
 
@@ -77,6 +84,7 @@
             </p>
             <p>
                 <span class="important">Attention, cette simulation est calculée juste à titre indicatif et est non contractuelle.</span>
+                <br><span class="font-italic">* Tarifs en vigueur au 31 décembre 2018.</span>
             </p>
         </div>
     </div>

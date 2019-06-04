@@ -1,12 +1,12 @@
 header {
-    background-color: salmon;
+    background-color: #282d33;
     color: white;
-    padding: 30px 0 30px;
+    padding: 20px 0 20px;
 }
 
 section {
-    color: darkgray;
-    padding: 50px 0;
+    color: #282d33;
+    padding: 30px 0;
 }
 
 label, p {
@@ -15,7 +15,7 @@ label, p {
 
 .form-control:focus {
     border-color: white;
-    box-shadow: inset 0 1px 1px white, 0 0 5px salmon;
+    box-shadow: inset 0 1px 1px white, 0 0 5px #f15252;
 }
 
 input[readonly] {
@@ -23,10 +23,10 @@ input[readonly] {
 }
 
 input[type='radio'] {
-    background-color: salmon;
+    background-color: #f15252;
     -moz-appearance: none;
     -webkit-appearance: none;
-    border: 1px solid salmon;
+    border: 1px solid #f15252;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -36,30 +36,36 @@ input[type='radio']:checked::before {
     content: '';
     display: inline-block;
     position: absolute;
-    top: 10px;
+    top: 9px;
     left: 2px;
     background-color: white;
-    border: 1px solid salmon;
+    border: 1px solid #f15252;
     border-radius: 50%;
     width: 15px;
     height: 15px;
 }
 
 .important {
-    color: salmon;
+    color: #f15252;
 }
 
 .form-spacing {
     padding: 15px 0 15px;
 }
 
-@media screen and (max-width: 640px) {
+.page-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 0 10px;
+}
+
+.font-italic {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 1024px) {
     header {
         padding: 20px 0 20px;
-    }
-
-    header h1 {
-        font-size: 1.3em;
     }
 
     section {
