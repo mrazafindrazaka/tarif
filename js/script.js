@@ -33,8 +33,8 @@ $(document).ready(function () {
         ** max = maximum
         */
 
-        let min = 8247.60;
-        let max = 58495.44;
+        let min = 8463.24;
+        let max = 67200;
 
         if (!revenu)
             revenu = min;
@@ -51,36 +51,36 @@ $(document).ready(function () {
 
         switch (radio) {
             case 1:
-                tarif_collectif = 0.06;
-                tarif_familial = 0.05;
+                tarif_collectif = 0.0610;
+                tarif_familial = 0.0508;
                 break;
             case 2:
-                tarif_collectif = 0.05;
-                tarif_familial = 0.04;
+                tarif_collectif = 0.0508;
+                tarif_familial = 0.0406;
                 break;
             case 3:
-                tarif_collectif = 0.04;
-                tarif_familial = 0.03;
+                tarif_collectif = 0.0406;
+                tarif_familial = 0.0305;
                 break;
             case 4:
-                tarif_collectif = 0.03;
-                tarif_familial = 0.03;
+                tarif_collectif = 0.0305;
+                tarif_familial = 0.0305;
                 break;
             case 5:
-                tarif_collectif = 0.03;
-                tarif_familial = 0.03;
+                tarif_collectif = 0.0305;
+                tarif_familial = 0.0305;
                 break;
             case 6:
-                tarif_collectif = 0.03;
-                tarif_familial = 0.02;
+                tarif_collectif = 0.0305;
+                tarif_familial = 0.0203;
                 break;
             case 7:
-                tarif_collectif = 0.03;
-                tarif_familial = 0.02;
+                tarif_collectif = 0.0305;
+                tarif_familial = 0.0203;
                 break;
             case 8:
-                tarif_collectif = 0.02;
-                tarif_familial = 0.02;
+                tarif_collectif = 0.0203;
+                tarif_familial = 0.0203;
                 break;
             default:
                 break;
