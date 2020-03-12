@@ -14,9 +14,22 @@ $(document).ready(function () {
             });
         };
     }(jQuery));
+
     $("#revenu").inputFilter(function (value) {
         return /^-?\d*[.,]?\d{0,2}$/.test(value);
     });
+
+    /*
+    ** Revenus minimums et maximums prisent en compte.
+    ** min = minimum
+    ** max = maximum
+    */
+    let min = 8463.24;
+    let max = 67200;
+
+    /* Affichage du min et max sur la page html */
+    $(".revenu:eq(0)").append(min + "€");
+    $(".revenu:eq(1)").append(max + "€");
 
     /* Fonction de calcul. */
     let calcul = function () {
@@ -27,18 +40,6 @@ $(document).ready(function () {
         let result_collectif;
         let result_familial;
 
-        /*
-        ** Revenus minimums et maximums prisent en compte. (à changer aussi dans index.html)
-        ** min = minimum
-        ** max = maximum
-        */
-
-        let min = 8463.24;
-        let max = 67200;
-
-        $(".revenu:eq(0)").append(min + "€");
-        $(".revenu:eq(1)").append(max + "€");
-
         if (!revenu)
             revenu = min;
         if (revenu < min)
@@ -48,10 +49,8 @@ $(document).ready(function () {
 
         /*
         ** Taux pour le tarif collectif et familial par nombre d'enfants.
-        **
         ** exemple: case 8 représente le taux pour 8 enfants et plus.
         */
-
         switch (radio) {
             case 1:
                 tarif_collectif = 0.0610;
