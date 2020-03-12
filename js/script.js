@@ -36,6 +36,9 @@ $(document).ready(function () {
         let min = 8463.24;
         let max = 67200;
 
+        $(".revenu:eq(0)").append(min + "€");
+        $(".revenu:eq(1)").append(max + "€");
+
         if (!revenu)
             revenu = min;
         if (revenu < min)
